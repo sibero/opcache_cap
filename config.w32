@@ -1,0 +1,13 @@
+// $Id$
+// vim:ft=javascript
+
+// If your extension references something external, use ARG_WITH
+// ARG_WITH("opcache_cap", "for opcache_cap support", "no");
+
+// Otherwise, use ARG_ENABLE
+ARG_ENABLE("opcache_cap", "enable opcache_cap support", "no");
+
+if (PHP_OPCACHE_CAP != "no") {
+	EXTENSION("opcache_cap", "opcache_cap.c");
+}
+
